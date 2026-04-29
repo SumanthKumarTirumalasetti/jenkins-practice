@@ -1,0 +1,17 @@
+pipeline {
+    agent {label 'AG-1'}
+
+    environment {
+        PROJECT = "Expense"
+    }
+
+    stages {
+        stage('Test') {
+            steps {
+              script{
+                sh 'echo Project name is $PROJECT'
+              }
+            }
+        }
+    }
+}

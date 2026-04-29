@@ -6,7 +6,7 @@ pipeline {
     }
     options {
         disableConcurrentBuilds()
-        timeout(time: 1, unit: 'SECONDS')
+        timeout(time: 60, unit: 'MINUTES')
     }
     
     stages {
@@ -16,7 +16,6 @@ pipeline {
                  sh """
                     echo "Hello, this is build"
                     echo "Project: $PROJECT"
-                    sleep 15
                  """
                }
             }
